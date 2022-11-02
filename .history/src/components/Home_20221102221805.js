@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { Notes } from './Notes';
+import noteContext from '../ContextApi/notes/noteContext';
 
 export const Home = () => {
 
@@ -22,7 +22,7 @@ export const Home = () => {
   </div>
   <button type="submit" className="btn btn-primary">Submit</button>
 </form>
-   <Notes/>
+   <Notes
     </div>
   )
 }

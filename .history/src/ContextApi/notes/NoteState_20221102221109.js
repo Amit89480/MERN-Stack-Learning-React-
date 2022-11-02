@@ -49,7 +49,7 @@ const NoteState = (props) => {
 
 
 
-    return <noteContext.Provider value={{notes,setnotes}}>
+    return <noteContext.Provider value={notes}>
       {props.children}
      </noteContext.Provider>
 }

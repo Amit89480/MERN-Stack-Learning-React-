@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import noteContext from '../ContextApi/notes/noteContext';
 import { Notes } from './Notes';
 
 export const Home = () => {

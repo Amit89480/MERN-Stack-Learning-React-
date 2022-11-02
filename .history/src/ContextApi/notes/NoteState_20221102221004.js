@@ -3,7 +3,7 @@ import  noteContext from "./noteContext";
 
 const NoteState = (props) => {
 
-    const notesinitial=[
+    const notes=[
         {
           "_id": "635ea3c4d1a7fa0aa4f0c419",
           "user": "635e9d2b5741e4f0a69563e1",
@@ -40,16 +40,14 @@ const NoteState = (props) => {
           "date": "Wed Nov 02 2022 00:15:10 GMT+0530 (India Standard Time)",
           "__v": 0
         }
-    ]
-    const [notes, setnotes] = useState(notesinitial)
-    
+      ]
 
  
     
 
 
 
-    return <noteContext.Provider value={{notes,setnotes}}>
+    return <noteContext.Provider value={{state,update}}>
       {props.children}
      </noteContext.Provider>
 }
