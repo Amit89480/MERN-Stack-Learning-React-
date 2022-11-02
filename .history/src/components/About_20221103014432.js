@@ -1,7 +1,8 @@
 import React from 'react'
 export const About = () => {
  
-return (
-    <div>This is About Page Comming Soon!</div>
+  
+  return (
+    <div></div>
   )
 }
