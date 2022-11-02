@@ -17,14 +17,7 @@ const NoteState = (props) => {
             },
 
         })
-        const json = await response.json();
-        setnotes(json);
-       
-        
-    
-  
-    };
-
+    /
 
 
     //Add a Note
@@ -99,7 +92,7 @@ const NoteState = (props) => {
 
 
     return (
-        <noteContext.Provider value={{ notes, setnotes, addnote, deletenote, editnote ,getnotes}}>
+        <noteContext.Provider value={{ notes, setnotes, addnote, deletenote, editnote }}>
             {props.children}
         </noteContext.Provider>
     );

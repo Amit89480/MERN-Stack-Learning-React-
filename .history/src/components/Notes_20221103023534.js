@@ -1,4 +1,4 @@
-import React, { useContext ,useEffect} from 'react'
+import React, { useContext ,use} from 'react'
 import noteContext from '../ContextApi/notes/noteContext';
 import { AddNote } from './AddNote';
 import { NotesItems } from './NotesItems';

@@ -17,12 +17,19 @@ const NoteState = (props) => {
             },
 
         })
-        const json = await response.json();
-        setnotes(json);
-       
-        
     
-  
+    //   const json= response.json();
+        console.log("adding a new note");
+        const note = {
+            _id: "635ea3c4d18898a7f9898a0aa4f0c419",
+            user: "635e9d2b5741545455446465656545455e4f0a69563e1",
+            title: title,
+            description: description,
+            tag: "cartoon series",
+            date: "Sun Oct 30 2022 21:48:10 GMT+0530 (India Standard Time)",
+            __v: 0,
+        };
+        setnotes(notes.concat(note));
     };
 
 
@@ -99,7 +106,7 @@ const NoteState = (props) => {
 
 
     return (
-        <noteContext.Provider value={{ notes, setnotes, addnote, deletenote, editnote ,getnotes}}>
+        <noteContext.Provider value={{ notes, setnotes, addnote, deletenote, editnote }}>
             {props.children}
         </noteContext.Provider>
     );
