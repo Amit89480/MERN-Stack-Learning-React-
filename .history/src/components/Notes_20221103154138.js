@@ -19,8 +19,6 @@ export const Notes = () => {
     };
     const [note, setnote] = useState({etitle:"",edescription:"",etag:""})
     
-    
-    
     const handleClick = (e) => {
         e.preventDefault();
       
@@ -112,7 +110,7 @@ export const Notes = () => {
               >
                 Close
               </button>
-                          <button onClick={ handleClick} type="button" className="btn btn-primary">
+              <button onClick type="button" className="btn btn-primary">
                 Update Note
               </button>
             </div>

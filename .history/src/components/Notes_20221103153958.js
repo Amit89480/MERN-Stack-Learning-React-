@@ -15,11 +15,9 @@ export const Notes = () => {
   const updatenote = (currentnote) => {
    
       console.log(ref.current.click());
-      setnote({etitle:currentnote.title,edescription:currentnote.description,etag:currentnote.tag});
+      setnote({etitlecurrentnote});
     };
     const [note, setnote] = useState({etitle:"",edescription:"",etag:""})
-    
-    
     
     const handleClick = (e) => {
         e.preventDefault();
@@ -112,7 +110,7 @@ export const Notes = () => {
               >
                 Close
               </button>
-                          <button onClick={ handleClick} type="button" className="btn btn-primary">
+              <button type="button" className="btn btn-primary">
                 Update Note
               </button>
             </div>

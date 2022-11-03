@@ -45,15 +45,15 @@ const NoteState = (props) => {
             user: "635e9d2b5741545455446465656545455e4f0a69563e1",
             title: title,
             description: description,
-            tag: tag,
+            tag: "cartoon series",
             date: "Sun Oct 30 2022 21:48:10 GMT+0530 (India Standard Time)",
             __v: 0,
         };
         setnotes(notes.concat(note));
     };
 
-    //Delete a Note
-    const deletenote =async (id) => {
+    //Delete a Noteasync
+    const deletenote = (id) => {
         //API CALL
         const response = await fetch(`${host}/api/notes/deletenote/${id}`, {
             method: 'DELETE',

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef ,useState} from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import noteContext from "../ContextApi/notes/noteContext";
 import { AddNote } from "./AddNote";
 import { NotesItems } from "./NotesItems";
@@ -12,38 +12,21 @@ export const Notes = () => {
 
   const ref = useRef(null);
 
-  const updatenote = (currentnote) => {
-   
-      console.log(ref.current.click());
-      setnote({etitle:currentnote.title,edescription:currentnote.description,etag:currentnote.tag});
-    };
-    const [note, setnote] = useState({etitle:"",edescription:"",etag:""})
-    
-    
-    
-    const handleClick = (e) => {
-        e.preventDefault();
-      
-    
-    }
-
-
-    const onChange = (e) => {
-
-        setnote({...note,[e.target.name]:e.target.value})
-        
-    }
+  const updatenote = (note) => {
+    console.log("clicked");
+    ref.current.click();
+  };
 
   return (
     <>
       <AddNote />
 
       <button
-              ref={ref}
+        ref={ref}
         type="button"
-        className="btn btn-primary d-none"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
+        className="btn btn-primary"
+        data-toggle="modal"
+        data-target="#exampleModal"
       >
         Update Note
       </button>
@@ -77,8 +60,8 @@ export const Notes = () => {
                   type="text"
                   className="form-control my-2"
                   id="etitle"
-                  name="etitle"
-                  aria-describedby="title" value={note.etitle}
+                  name="title"
+                  aria-describedby="title"
                   onChange={onChange}
                 />
               </div>
@@ -87,8 +70,8 @@ export const Notes = () => {
                 <input
                   type="text"
                   className="form-control my-2"
-                  id="edescription"
-                  name="edescription" value={note.edescription}
+                  id="description"
+                  name="description"
                   onChange={onChange}
                 />
               </div>
@@ -97,9 +80,8 @@ export const Notes = () => {
                 <input
                   type="text"
                   className="form-control my-2"
-                  id="etag"
-                                  name="etag"
-                                  value={note.etag}
+                  id="tag"
+                  name="tag"
                   onChange={onChange}
                 />
               </div>
@@ -108,11 +90,11 @@ export const Notes = () => {
               <button
                 type="button"
                 className="btn btn-secondary"
-                data-bs-dismiss="modal"
+                data-dismiss="modal"
               >
                 Close
               </button>
-                          <button onClick={ handleClick} type="button" className="btn btn-primary">
+              <button type="button" className="btn btn-primary">
                 Update Note
               </button>
             </div>

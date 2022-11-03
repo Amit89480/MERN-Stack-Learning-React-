@@ -45,7 +45,7 @@ const NoteState = (props) => {
             user: "635e9d2b5741545455446465656545455e4f0a69563e1",
             title: title,
             description: description,
-            tag: tag,
+            tag: "cartoon series",
             date: "Sun Oct 30 2022 21:48:10 GMT+0530 (India Standard Time)",
             __v: 0,
         };
@@ -53,7 +53,7 @@ const NoteState = (props) => {
     };
 
     //Delete a Note
-    const deletenote =async (id) => {
+    const deletenote = (id) => {
         //API CALL
         const response = await fetch(`${host}/api/notes/deletenote/${id}`, {
             method: 'DELETE',
@@ -61,10 +61,9 @@ const NoteState = (props) => {
                 'content-type': 'application/json',
                 'auth-token':'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjM1ZTlkMmI1NzQxZTRmMGE2OTU2M2UxIn0sImlhdCI6MTY2NzE0NTAwM30.B7LBe8boHcCBysODlTJAQ7l9BjS0hkiNZp2LvXboll8'
             },
-          
+            body: JSON.stringify({title,description,tag})
         })
       const json= response.json();
-      console.log(json)
         const newnotes = notes.filter((note) => {return note._id!== id })
         setnotes(newnotes);
     }

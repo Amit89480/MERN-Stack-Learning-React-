@@ -10,16 +10,13 @@ export const Notes = () => {
     getnotes();
   }, []);
 
-  const ref = useRef(null);
+  const ref = useRef();
 
-  const updatenote = (currentnote) => {
-   
+  const updatenote = (note) => {
+    console.log("clicked");
       console.log(ref.current.click());
-      setnote({etitle:currentnote.title,edescription:currentnote.description,etag:currentnote.tag});
     };
-    const [note, setnote] = useState({etitle:"",edescription:"",etag:""})
-    
-    
+    const [note, setnote] = useState({title:"",description:"",tag:""})
     
     const handleClick = (e) => {
         e.preventDefault();
@@ -42,8 +39,8 @@ export const Notes = () => {
               ref={ref}
         type="button"
         className="btn btn-primary d-none"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
+        data-toggle="modal"
+        data-target="#exampleModal"
       >
         Update Note
       </button>
@@ -78,7 +75,7 @@ export const Notes = () => {
                   className="form-control my-2"
                   id="etitle"
                   name="etitle"
-                  aria-describedby="title" value={note.etitle}
+                  aria-describedby="title"
                   onChange={onChange}
                 />
               </div>
@@ -88,7 +85,7 @@ export const Notes = () => {
                   type="text"
                   className="form-control my-2"
                   id="edescription"
-                  name="edescription" value={note.edescription}
+                  name="edescription"
                   onChange={onChange}
                 />
               </div>
@@ -98,8 +95,7 @@ export const Notes = () => {
                   type="text"
                   className="form-control my-2"
                   id="etag"
-                                  name="etag"
-                                  value={note.etag}
+                  name="etag"
                   onChange={onChange}
                 />
               </div>
@@ -108,11 +104,11 @@ export const Notes = () => {
               <button
                 type="button"
                 className="btn btn-secondary"
-                data-bs-dismiss="modal"
+                data-dismiss="modal"
               >
                 Close
               </button>
-                          <button onClick={ handleClick} type="button" className="btn btn-primary">
+              <button type="button" className="btn btn-primary">
                 Update Note
               </button>
             </div>

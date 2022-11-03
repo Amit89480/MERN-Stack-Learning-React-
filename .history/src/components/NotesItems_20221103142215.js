@@ -11,7 +11,7 @@ export const NotesItems = (props) => {
           <div className="card my-3">
               <div className="card-body">
 
-                 <h5 className="card-title">{note.title}</h5>
+                 <h5 className="card-title">{note.titl}</h5>
                   <p className="card-text">{note.description}</p>
                   <p className="card-text">{note.tag}</p>
                   <i className="fa-solid fa-pen-to-square mx-2 "onClick={()=>{updatenote(note)}}></i>

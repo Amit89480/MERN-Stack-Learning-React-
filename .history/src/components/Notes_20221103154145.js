@@ -19,8 +19,6 @@ export const Notes = () => {
     };
     const [note, setnote] = useState({etitle:"",edescription:"",etag:""})
     
-    
-    
     const handleClick = (e) => {
         e.preventDefault();
       
