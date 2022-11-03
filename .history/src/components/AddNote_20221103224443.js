@@ -14,8 +14,7 @@ export const AddNote = () => {
     }
 
 
-    
-  const onChange = (e) => {
+    const onChange = (e) => {
 
         setnote({...note,[e.target.name]:e.target.value})
         

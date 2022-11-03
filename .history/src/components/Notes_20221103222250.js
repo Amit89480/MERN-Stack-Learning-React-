@@ -81,8 +81,7 @@ export const Notes = () => {
                   type="text"
                   className="form-control my-2"
                   id="etitle"
-                                  name="etitle"
-                                  minLength={5} required
+                  name="etitle"
                   aria-describedby="title" value={note.etitle}
                   onChange={onChange}
                 />
@@ -119,7 +118,7 @@ export const Notes = () => {
               >
                 Close
               </button>
-                          <button disabled={note.etitle.length<5||note.edescription.length<5} onClick={ handleClick} type="button" className="btn btn-primary">
+                          <button onClick={ handleClick} type="button" className="btn btn-primary">
                 Update Note
               </button>
             </div>

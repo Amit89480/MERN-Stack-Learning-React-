@@ -81,8 +81,7 @@ export const Notes = () => {
                   type="text"
                   className="form-control my-2"
                   id="etitle"
-                                  name="etitle"
-                                  minLength={5} required
+                  name="etitle"
                   aria-describedby="title" value={note.etitle}
                   onChange={onChange}
                 />
@@ -92,8 +91,7 @@ export const Notes = () => {
                 <input
                   type="text"
                   className="form-control my-2"
-                                  id="edescription"
-                                  minLength={5} required
+                  id="edescription"
                   name="edescription" value={note.edescription}
                   onChange={onChange}
                 />
@@ -119,7 +117,7 @@ export const Notes = () => {
               >
                 Close
               </button>
-                          <button disabled={note.etitle.length<5||note.edescription.length<5} onClick={ handleClick} type="button" className="btn btn-primary">
+                          <button onClick={ handleClick} type="button" className="btn btn-primary">
                 Update Note
               </button>
             </div>
@@ -129,11 +127,7 @@ export const Notes = () => {
 
       <div className="row my-3">
               <h1 className="container mx-4">Your Note</h1>
-              <div className="container mx-4">
-                  <strong>
-                      {notes.length === 0 && "No Notes To Display!"}
-                      </strong>
-                  </div>
+              {notes.length==0&&"No Notes To Display!"}
         {notes.map((note) => {
           return (
             <NotesItems key={note._id} updatenote={updatenote} note={note} />

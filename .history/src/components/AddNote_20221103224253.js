@@ -9,13 +9,12 @@ export const AddNote = () => {
     const handleClick = (e) => {
         e.preventDefault();
        addnote(note.title,note.description,note.tag);
-      setnote({ title: "", description: "", tag: "" }); 
+      setnote({ title: "", description: "", tag: "" }); value={note}
     
     }
 
 
-    
-  const onChange = (e) => {
+    const onChange = (e) => {
 
         setnote({...note,[e.target.name]:e.target.value})
         
