@@ -5,28 +5,24 @@ import { NotesItems } from "./NotesItems";
 
 export const Notes = () => {
   const context = useContext(noteContext);
-  const { notes, getnotes ,editnote} = context;
+  const { notes, getnotes } = context;
   useEffect(() => {
     getnotes();
   }, []);
 
   const ref = useRef(null);
-  const refclose = useRef(null);
-    const [note, setnote] = useState({ id: "", etitle: "", edescription: "", etag: "" });
 
   const updatenote = (currentnote) => {
    
       console.log(ref.current.click());
-      setnote({id:currentnote._id,etitle:currentnote.title,edescription:currentnote.description,etag:currentnote.tag});
+      setnote({etitle:currentnote.title,edescription:currentnote.description,etag:currentnote.tag});
     };
-   
+    const [note, setnote] = useState({id:""etitle:"",edescription:"",etag:""})
     
     
     
-    const handleClick = () => {
-        editnote(note.id,note.etitle,note.edescription,note.etag);
-        refclose.current.click();
-
+    const handleClick = (e) => {
+        e.preventDefault();
       
     
     }
@@ -113,7 +109,6 @@ export const Notes = () => {
                 type="button"
                 className="btn btn-secondary"
                 data-bs-dismiss="modal"
-                ref={refclose}
               >
                 Close
               </button>

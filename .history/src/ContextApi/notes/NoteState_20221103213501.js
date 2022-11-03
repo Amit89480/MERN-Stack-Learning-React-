@@ -70,12 +70,10 @@ const NoteState = (props) => {
     }
        
     
-
+  
 
     //Edit A Note
-     let newnotes=JSON.parse(JSON.stringify(notes))
     const editnote = async (title, description, tag) => {
-        
         //API CALL
         const response = await fetch(`${host}/api/notes/updatenote/${id}`, {
             method: 'PUT',
@@ -87,22 +85,23 @@ const NoteState = (props) => {
         })
       const json= response.json();
         console.log(json);
-       
- for (let index = 0; index < newnotes.length; index++) {
-            const element = newnotes[index];
+    
+
+
+
+
+
+        // here we are using for loop
+        for (let index = 0; index < notes.length; index++) {
+            const element = notes[index];
             if (element._id == id) {
-                newnotes[index].title = title;
-                newnotes[index].description = description;
-                newnotes[index].tag = tag;
-                break;
+                notes[index].title = title;
+                notes[index].description = desc;
+                notes[index].title = title;
+               
             }
-           
-        }
-        console.log(id, notes);
-        setnotes(newnotes);
-       
             
-        
+        }
 
     };
 

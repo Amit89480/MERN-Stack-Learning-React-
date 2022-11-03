@@ -92,14 +92,14 @@ const NoteState = (props) => {
             const element = newnotes[index];
             if (element._id == id) {
                 newnotes[index].title = title;
-                newnotes[index].description = description;
-                newnotes[index].tag = tag;
+                notes[index].description = description;
+                notes[index].tag = tag;
                 break;
             }
            
         }
         console.log(id, notes);
-        setnotes(newnotes);
+        setnotes(notes);
        
             
         

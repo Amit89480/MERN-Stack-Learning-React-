@@ -5,13 +5,13 @@ import { NotesItems } from "./NotesItems";
 
 export const Notes = () => {
   const context = useContext(noteContext);
-  const { notes, getnotes ,editnote} = context;
+  const { notes, getnotes } = context;
   useEffect(() => {
     getnotes();
   }, []);
 
   const ref = useRef(null);
-  const refclose = useRef(null);
+  const ref = useRef(null);
     const [note, setnote] = useState({ id: "", etitle: "", edescription: "", etag: "" });
 
   const updatenote = (currentnote) => {
@@ -23,9 +23,8 @@ export const Notes = () => {
     
     
     
-    const handleClick = () => {
-        editnote(note.id,note.etitle,note.edescription,note.etag);
-        refclose.current.click();
+    const handleClick = (e) => {
+        e.preventDefault();
 
       
     

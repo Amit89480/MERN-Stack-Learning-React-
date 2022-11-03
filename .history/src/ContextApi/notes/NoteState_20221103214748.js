@@ -73,7 +73,7 @@ const NoteState = (props) => {
 
 
     //Edit A Note
-     let newnotes=JSON.parse(JSON.stringify(notes))
+     let =JSON.parse(JSON.stringify(notes))
     const editnote = async (title, description, tag) => {
         
         //API CALL
@@ -88,18 +88,18 @@ const NoteState = (props) => {
       const json= response.json();
         console.log(json);
        
- for (let index = 0; index < newnotes.length; index++) {
-            const element = newnotes[index];
+ for (let index = 0; index < notes.length; index++) {
+            const element = notes[index];
             if (element._id == id) {
-                newnotes[index].title = title;
-                newnotes[index].description = description;
-                newnotes[index].tag = tag;
+                notes[index].title = title;
+                notes[index].description = description;
+                notes[index].tag = tag;
                 break;
             }
            
         }
         console.log(id, notes);
-        setnotes(newnotes);
+        setnotes(notes);
        
             
         

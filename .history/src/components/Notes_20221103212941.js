@@ -24,7 +24,7 @@ export const Notes = () => {
     
     
     const handleClick = () => {
-        editnote(note.id,note.etitle,note.edescription,note.etag);
+        editnote(note._id,note.etitle,note.edescription,note.etag);
         refclose.current.click();
 
       

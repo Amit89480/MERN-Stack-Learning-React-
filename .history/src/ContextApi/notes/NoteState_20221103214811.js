@@ -99,7 +99,7 @@ const NoteState = (props) => {
            
         }
         console.log(id, notes);
-        setnotes(newnotes);
+        setnotes(notes);
        
             
         
