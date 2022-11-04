@@ -51,7 +51,7 @@ const Login = (props) => {
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
             </div>
-        <div className="container my-2"><strong>If user does'nt exists please Signup!</strong></div>
+        <div className="container"></div>
             </>
     )
 }

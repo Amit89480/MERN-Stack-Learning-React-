@@ -34,11 +34,10 @@ const Login = (props) => {
     }
 
     return (
-        <>
         <div>
             <form  onSubmit={handleSubmit}>
                 <div className="mb-3">
-                    <h2>Login for using iNotebook</h2>
+                    <h2></h2>
                     <label htmlFor="email" className="form-label">Email address</label>
                     <input type="email" className="form-control" value={credentials.email} onChange={onChange} id="email" name="email" aria-describedby="emailHelp" />
                     <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
@@ -50,9 +49,7 @@ const Login = (props) => {
 
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
-            </div>
-        <div className="container my-2"><strong>If user does'nt exists please Signup!</strong></div>
-            </>
+        </div>
     )
 }
 

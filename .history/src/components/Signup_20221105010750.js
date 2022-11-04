@@ -63,7 +63,7 @@ const Signup = (props) => {
 
   <button type="submit" className="btn btn-primary">Submit</button>
         </form>
-        <div className="container my-2">
+        <div className="container mx-2">
           <strong>If user Already exists Please Login</strong>
         
      </div>
